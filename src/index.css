@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nova+Square&family=Nunito&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hedvig+Letters+Sans&family=Nova+Square&family=Nunito&family=Roboto:wght@300&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font1 {
+  font-family: "Bebas Neue", sans-serif;
+}
+.font2 {
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.main-section {
+  display: grid;
+  grid-template-areas: "header header header header" "tab main main main";
+  grid-template-rows: 100px 1fr;
+  grid-template-columns: 300px 1fr;
+}
+
+.header {
+  grid-area: header;
+}
+
+.tab-bar {
+  grid-area: tab;
+}
+
+.main {
+  grid-area: main;
+  /* display: grid;
+  grid-area: "a b c" "d d d";
+  grid-template-rows: 200px 1fr;
+  grid-template-columns: 1fr 1fr 1fr; */
+}
+
+.cost {
+  grid-area: a;
+}
+.benefit {
+  grid-area: b;
+}
+.diffrence {
+  grid-area: c;
+}
+.chart {
+  grid-area: d;
+}
+
+.profile {
+  display: none;
+  --deep-dive: 0;
+  mask-image: linear-gradient(
+    -300deg,
+    rgba(0, 0, 0, 1)
+      calc(var(--deep-dive) * 100% - 210px * (1 - var(--deep-dive))),
+    transparent calc(var(--deep-dive) * (100% + 210px))
+  );
+}
